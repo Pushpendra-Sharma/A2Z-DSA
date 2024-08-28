@@ -1,0 +1,21 @@
+{
+  "name": "a2z-dsa",
+  "version": "1.0.0",
+  "description": "Learn Data Structures & Algorithms.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pushpendra-sharma/a2z-dsa.git"
+  },
+  "author": "Pushpendra Sharma",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "babel-jest": "^29.7.0",
+    "jest": "^29.7.0"
+  }
+}
