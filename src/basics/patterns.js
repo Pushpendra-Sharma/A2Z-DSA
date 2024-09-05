@@ -6,7 +6,7 @@ export function pattern1(n) {
     line += '* ';
   }
   for (let i = 0; i < n; i++) {
-    str += line + '\n';
+    str += line + '\n ';
   }
   return str;
 }
@@ -19,7 +19,7 @@ export function pattern2(n) {
     for (let k = 0; k <= i; k++) {
       str += '* ';
     }
-    str += '\n';
+    str += '\n ';
   }
   return str;
 }
@@ -32,7 +32,7 @@ export function pattern3(n) {
     for (let k = 1; k <= i; k++) {
       str += `${k}`;
     }
-    str += '\n';
+    str += '\n ';
   }
   return str;
 }
@@ -45,7 +45,33 @@ export function pattern4(n) {
     for (let k = 1; k <= i; k++) {
       str += `${i}`;
     }
-    str += '\n';
+    str += '\n ';
+  }
+  return str;
+}
+
+/** Time complexity - O(n^2) */
+export function pattern5(n) {
+  let str = '';
+
+  for (let i = 0; i < n; i++) {
+    for (let k = i; k < n; k++) {
+      str += `${k}`;
+    }
+    str += '\n ';
+  }
+  return str;
+}
+
+/** Time complexity - O(n^2) */
+export function pattern6(n) {
+  let str = '';
+
+  for (let i = n; i > 0; i--) {
+    for (let k = 1; k <=i; k++) {
+      str += `${k}`;
+    }
+    str += '\n ';
   }
   return str;
 }
