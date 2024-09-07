@@ -101,3 +101,19 @@ export function pattern13(n) {
   }
   return str;
 }
+
+/**
+ * Time complexity - O(n^2)
+ * @param {Number} n
+ * @returns {String}
+ */
+export function pattern14(n) {
+  let str = '';
+  for (let i = 0; i < n; i++) {
+    for (let j = 65; j <= 65 + i; j++) {
+      str += String.fromCharCode(j);
+    }
+    str += '\n ';
+  }
+  return str;
+}
