@@ -68,10 +68,23 @@ export function pattern6(n) {
   let str = '';
 
   for (let i = n; i > 0; i--) {
-    for (let k = 1; k <=i; k++) {
+    for (let k = 1; k <= i; k++) {
       str += `${k}`;
     }
     str += '\n ';
   }
   return str;
 }
+
+/** Time complexity - O(n^2) */
+export function pattern11(n) {
+  let str = '';
+  for (let i = 0; i < n; i++) {
+    for (let j = 0; j <= i; j++) {
+      str += `${(i + j + 1) % 2}`;
+    }
+    str += '\n ';
+  }
+  return str;
+}
+console.log('::: ', pattern11(5));
