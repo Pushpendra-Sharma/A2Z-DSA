@@ -87,4 +87,17 @@ export function pattern11(n) {
   }
   return str;
 }
-console.log('::: ', pattern11(5));
+
+/** Time complexity - O(n^2) */
+export function pattern13(n) {
+  let str = '';
+  let counter = 0;
+  for (let i = 1; i <= n; i++) {
+    for (let j = 0; j < i; j++) {
+      counter++;
+      str += `${counter} `;
+    }
+    str += '\n ';
+  }
+  return str;
+}
