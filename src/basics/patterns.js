@@ -88,6 +88,24 @@ export function pattern11(n) {
   return str;
 }
 
+/**
+ * Time complexity - O(n^2)
+ * @param {Number} n
+ * @returns {String}
+ */
+export function pattern12(n) {
+  let str = '';
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= 2 * n; j++) {
+      if (j <= i) str += `${j}`;
+      else if (j >= 2 * n - i + 1) str += `${2 * n - j + 1}`;
+      else str += ' ';
+    }
+    str += '\n ';
+  }
+  return str;
+}
+
 /** Time complexity - O(n^2) */
 export function pattern13(n) {
   let str = '';
