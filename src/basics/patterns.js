@@ -101,6 +101,26 @@ export function pattern7(n) {
   return str;
 }
 
+export function pattern8(n) {
+  let str = '';
+  for (let i = n; i >= 0; i--) {
+    // space
+    for (let j = 1; j <= n - i; j++) {
+      str += ` `;
+    }
+    // star
+    for (let j = 1; j <= 2 * i - 1; j++) {
+      str += `*`;
+    }
+    // space
+    for (let j = 1; j <= n - i; j++) {
+      str += ` `;
+    }
+    str += '\n ';
+  }
+  return str;
+}
+
 /** Time complexity - O(n^2) */
 export function pattern11(n) {
   let str = '';
