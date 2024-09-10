@@ -76,6 +76,31 @@ export function pattern6(n) {
   return str;
 }
 
+/**
+ * Time complexity - O(n^2)
+ * @param {Number} n
+ * @returns {String}
+ */
+export function pattern7(n) {
+  let str = '';
+  for (let i = 1; i <= n; i++) {
+    // space
+    for (let j = 1; j <= n - i; j++) {
+      str += ` `;
+    }
+    // star
+    for (let j = 1; j <= 2 * i - 1; j++) {
+      str += `*`;
+    }
+    // space
+    for (let j = 1; j <= n - i; j++) {
+      str += ` `;
+    }
+    str += '\n ';
+  }
+  return str;
+}
+
 /** Time complexity - O(n^2) */
 export function pattern11(n) {
   let str = '';
