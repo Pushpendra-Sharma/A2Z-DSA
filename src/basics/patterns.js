@@ -221,6 +221,34 @@ export function pattern16(n) {
   return str;
 }
 
+export function pattern17(n) {
+  let str = '';
+  for (let i = 1; i <= n; i++) {
+    // spaces
+    for (let j = 1; j <= n - i; j++) {
+      str += ` `;
+    }
+    // increasing order letters
+    for (let j = 1; j < i; j++) {
+      str += String.fromCharCode(64 + j);
+    }
+
+    // middle letter
+    str += String.fromCharCode(64 + i);
+
+    // decreasing order letters
+    for (let j = i - 1; j >= 1; j--) {
+      str += String.fromCharCode(64 + j);
+    }
+    
+    // space
+    for (let j = 1; j <= n - i; j++) {
+      str += ` `;
+    }
+    str += '\n ';
+  }
+  return str;
+}
 /**
  * Time complexity - O(n^2)
  * @param {Number} n
