@@ -240,7 +240,7 @@ export function pattern17(n) {
     for (let j = i - 1; j >= 1; j--) {
       str += String.fromCharCode(64 + j);
     }
-    
+
     // space
     for (let j = 1; j <= n - i; j++) {
       str += ` `;
@@ -264,3 +264,46 @@ export function pattern18(n) {
   }
   return str;
 }
+
+export function pattern19(n) {
+  let str = '';
+  for (let i = 0; i < n; i++) {
+    // stars
+    for (let j = 1; j <= n - i; j++) {
+      str += '*';
+    }
+
+    // spaces
+    for (let j = 0; j < 2 * i; j++) {
+      str += ' ';
+    }
+
+    // stars
+    for (let j = 1; j <= n - i; j++) {
+      str += '*';
+    }
+
+    str += '\n ';
+  }
+  for (let i = 1; i <= n; i++) {
+    // stars
+    for (let j = 1; j <= i; j++) {
+      str += '*';
+    }
+
+    // spaces
+    for (let j = 1; j <= 2 *(n-i); j++) {
+      str += ' ';
+    }
+
+    // stars
+    for (let j = 1; j <= i; j++) {
+      str += '*';
+    }
+
+    str += '\n ';
+  }
+  return str;
+}
+
+export function pattern20(n) {}
