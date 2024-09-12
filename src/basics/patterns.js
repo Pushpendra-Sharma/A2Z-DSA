@@ -292,7 +292,7 @@ export function pattern19(n) {
     }
 
     // spaces
-    for (let j = 1; j <= 2 *(n-i); j++) {
+    for (let j = 1; j <= 2 * (n - i); j++) {
       str += ' ';
     }
 
@@ -306,4 +306,43 @@ export function pattern19(n) {
   return str;
 }
 
-export function pattern20(n) {}
+export function pattern20(n) {
+  let str = '';
+  for (let i = 1; i <= n; i++) {
+    // stars
+    for (let j = 1; j <= i; j++) {
+      str += '*';
+    }
+
+    // spaces
+    for (let j = 1; j <= 2 * (n - i); j++) {
+      str += ' ';
+    }
+
+    // stars
+    for (let j = 1; j <= i; j++) {
+      str += '*';
+    }
+    str += '\n ';
+  }
+
+  for (let i = 1; i < n; i++) {
+    // stars
+    for (let j = 1; j <= n - i; j++) {
+      str += '*';
+    }
+
+    // spaces
+    for (let j = 0; j < 2 * i; j++) {
+      str += ' ';
+    }
+
+    // stars
+    for (let j = 1; j <= n - i; j++) {
+      str += '*';
+    }
+
+    str += '\n ';
+  }
+  return str;
+}
