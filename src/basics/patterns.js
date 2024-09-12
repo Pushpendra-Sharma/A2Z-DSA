@@ -346,3 +346,26 @@ export function pattern20(n) {
   }
   return str;
 }
+
+export function pattern21(n) {
+  let str = '';
+  let line = '';
+  for (let i = 1; i <= n; i++) {
+    line += '*';
+  }
+
+  str += line;
+  str += '\n ';
+
+  for (let i = 1; i <= n - 2; i++) {
+    for (let j = 1; j <= n; j++) {
+      if (j === 1 || j === n) str += '*';
+      else str += ' ';
+    }
+    str += '\n ';
+  }
+
+  str += line;
+
+  return str;
+}
