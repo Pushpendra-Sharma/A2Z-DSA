@@ -369,3 +369,23 @@ export function pattern21(n) {
 
   return str;
 }
+
+/* 
+  Time complexity - O(n^2) 
+  Space complexity - O(n^2) 
+*/
+export function pattern22(n) {
+  let str = '';
+  const size = 2 * n - 1;
+
+  for (let i = 0; i < size; i++) {
+    for (let j = 0; j < size; j++) {
+      // Calculate the minimum distance to the nearest edge and add 1 to get the pattern value.
+      const minDistance = Math.min(i, j, size - 1 - i, size - 1 - j);
+      str += n - minDistance + ' ';
+    }
+    str += `\n`;
+  }
+
+  return str;
+}
