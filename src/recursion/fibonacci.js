@@ -14,3 +14,29 @@ export function printFibonacci(n) {
   return series;
 }
 
+/* 
+  Time complexity - O(2^n) 
+  Space complexity - O(n) 
+*/
+function fibonacci(n) {
+  // Base cases
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+
+  // Recursive case
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+
+/* 
+  Time complexity - O(n*2^n) 
+  Space complexity - O(n) 
+*/
+export function printFibonacciByRecursion(n) {
+  const series = [];
+
+  for (let i = 0; i < n; i++) {
+    series.push(fibonacci(i));
+  }
+
+  return series;
+}
