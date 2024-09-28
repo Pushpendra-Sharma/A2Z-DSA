@@ -14,3 +14,21 @@ export function checkPalindromeString(str) {
   }
   return true;
 }
+
+/**
+ * @param {string} str
+ * @return {boolean}
+ *
+ * Time Complexity - O(n)
+ * Space Complexity - O(n)
+ */
+function isPalindromeStringByRecursion(str, start = 0, end = str.length - 1) {
+  // Base case: if the start index crosses the end index, it's a palindrome
+  if (start >= end) return true;
+
+  // Check if characters at start and end positions are the same
+  if (str[start] !== str[end]) return false;
+
+  // Recursive call to move inward
+  return isPalindromeStringByRecursion(str, start + 1, end - 1);
+}
