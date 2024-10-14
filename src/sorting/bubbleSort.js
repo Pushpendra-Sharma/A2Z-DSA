@@ -10,7 +10,7 @@ function swap(array, i, j) {
   array[j] = temp;
 }
 
-/** Time complexity O(n) Space complexity O(1) */
+/** Time complexity O(n^2) Space complexity O(1) */
 function bubbleSort(array) {
   let swapCount = 0;
   for (let i = array.length - 1; i >= 0; i--) {
