@@ -17,3 +17,20 @@ function insertionSort(array) {
 
   return array;
 }
+
+function swap(array, index1, index2) {
+  const temp = array[index1];
+  array[index1] = array[index2];
+  array[index2] = temp;
+}
+
+function insertionSortUsingSwap(array) {
+  for (let i = 1; i < array.length; i++) {
+    let j = i;
+    while (j > 0 && array[j - 1] > array[j]) {
+      swap(array, j, j - 1);
+      j--;
+    }
+  }
+  return array;
+}
