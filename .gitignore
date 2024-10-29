@@ -38,6 +38,8 @@ Thumbs.db
 *.wmv
 
 .vscode
+.devcontainer
+.codesandbox
 
 # testing
 /coverage
