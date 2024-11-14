@@ -11,11 +11,13 @@
 // Time complexity O(n) | Space complexity O(n)
 function twoSum(array, target) {
   if (array.length < 1) return false;
-  const hashMap = {};
+  const map = new Map();
 
-  for (const n of array) {
-    hashMap[n] = (hashMap[n] || 0) + 1;
-    if (hashMap[target - n] && target - n !== n) {
+  for (let i = 0; i < array.length; i++) {
+    const n = array[i];
+    const rest = target - n;
+    map.set(n, i);
+    if (map.has(rest)) {
       return true;
     }
   }
